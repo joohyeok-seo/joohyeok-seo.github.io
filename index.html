@@ -3,26 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joohyeok Seo's Portfolio</title>
-  <!-- Bootstrap CSS -->
+  <title>JooHyeok Seo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa;
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
     }
-    .profile-img {
-      max-width: 150px;
-      border-radius: 50%;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .section-title {
-      margin-top: 40px;
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       margin-bottom: 20px;
-      font-size: 1.5rem;
+    }
+    .header img {
+      border-radius: 8px;
+      width: 150px;
+      height: auto;
+    }
+    .header div {
+      flex: 1;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
       font-weight: bold;
-      color: #343a40;
+    }
+    .header p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    .links a {
+      margin-right: 10px;
+      color: #0078e7;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .section h2 {
+      font-size: 1.5rem;
       border-bottom: 2px solid #0078e7;
       display: inline-block;
+      margin-bottom: 15px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li a {
+      color: #0078e7;
+      text-decoration: none;
+    }
+    ul li a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
@@ -31,72 +84,52 @@
       background-color: #343a40;
       color: white;
     }
-    a {
-      color: #0078e7;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <!-- Header -->
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
-      </div>
-      <div class="col-md-8">
-        <h1>Joohyeok Seo</h1>
-        <p class="text-muted">
-          I am a Data Analyst and Programmer. My work focuses on solving complex problems in data science, machine learning, and software development.
-        </p>
+  <div class="container">
+    <div class="header">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+      <div>
+        <h1>JooHyeok Seo</h1>
         <p>
-          <a href="mailto:joohyeok@example.com">📧 Email</a> | 
-          <a href="#">📄 CV</a> | 
-          <a href="#">🎓 Google Scholar</a> | 
-          <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a> | 
-          <a href="https://github.com/joohyeok-seo" target="_blank">🐙 GitHub</a>
+          I graduated with a degree in Statistics from Simon Fraser University.  
+          I am a Data Analyst and Programmer specializing in data science, machine learning, and software development.  
         </p>
-      </div>
-    </div>
-    
-    <!-- Interests -->
-    <div class="row mt-4">
-      <div class="col-12">
-        <h2 class="section-title">Interests</h2>
-        <ul>
-          <li>Data Science</li>
-          <li>Machine Learning</li>
-          <li>Data Visualization</li>
-          <li>Programming</li>
-        </ul>
+        <div class="links">
+          <a href="mailto:jsa184@sfu.ca">📧 Email</a>
+          <a href="cv.pdf" target="_blank">📄 CV</a>
+          <a href="https://www.linkedin.com/in/jacky-seo-7657b4251/" target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/joohyeok-seo" target="_blank">🐙 GitHub</a>
+        </div>
       </div>
     </div>
 
-    <!-- Research Projects -->
-    <div class="row mt-4">
-      <div class="col-12">
-        <h2 class="section-title">Research Projects</h2>
-        <ul>
-          <li>
-            <a href="https://github.com/joohyeok-seo/Student-Grade-Relationship" target="_blank">Student Grade Analysis</a> - Analysis of factors affecting student performance.
-          </li>
-          <li>
-            <a href="https://github.com/joohyeok-seo/SFU-Dining-Preferences-Analysis" target="_blank">SFU Dining Preferences</a> - Insights into dining habits of students.
-          </li>
-        </ul>
-      </div>
+    <div class="section">
+      <h2>Interests</h2>
+      <ul>
+        <li>Data Science</li>
+        <li>Machine Learning</li>
+        <li>Data Visualization</li>
+        <li>Programming</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Research Projects</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Student-Grade-Relationship" target="_blank">Student Grade Analysis</a> - Analysis of factors affecting student performance.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/SFU-Dining-Preferences-Analysis" target="_blank">SFU Dining Preferences</a> - Insights into dining habits of students.
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2024 Joohyeok Seo. All rights reserved.</p>
+    <p>© 2024 JooHyeok Seo. All rights reserved.</p>
   </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
