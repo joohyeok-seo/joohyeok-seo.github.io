@@ -9,64 +9,96 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
-      background-color: #f4f4f4;
+      background-color: #f8f9fa;
     }
     header {
-      background-color: #0078e7;
+      background-color: #343a40;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
+      text-align: center;
     }
     header h1 {
       margin: 0;
+      font-size: 2.5rem;
     }
-    .profile {
+    header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 800px;
       margin: 20px auto;
       padding: 20px;
       background-color: white;
-      border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      width: 80%;
-      max-width: 600px;
+      border-radius: 10px;
     }
-    .profile img {
+    .profile-image {
+      text-align: center;
+    }
+    .profile-image img {
       border-radius: 50%;
       width: 150px;
       height: 150px;
       object-fit: cover;
     }
-    .profile h2 {
-      margin-top: 10px;
-      font-size: 24px;
+    .section {
+      margin-top: 20px;
     }
-    .profile p {
-      margin: 10px 0;
+    .section h2 {
+      font-size: 1.5rem;
+      color: #343a40;
+      border-bottom: 2px solid #0078e7;
+      display: inline-block;
+    }
+    .section p {
+      font-size: 1rem;
       color: #555;
     }
-    .profile a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #0078e7;
-      color: white;
+    .links a {
       text-decoration: none;
-      border-radius: 5px;
+      color: #0078e7;
+      font-weight: bold;
+      margin-right: 15px;
     }
-    .profile a:hover {
-      background-color: #005bb5;
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #343a40;
+      color: white;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Joohyeok Seo's Portfolio</h1>
-  </header>
-  <div class="profile">
-    <img src="https://via.placeholder.com/150" alt="Joohyeok Seo's Profile Picture">
-    <h2>Joohyeok Seo</h2>
+    <h1>Joohyeok Seo</h1>
     <p>Data Analyst | Programmer | Creative Thinker</p>
-    <a href="https://github.com/joohyeok-seo" target="_blank">GitHub Profile</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </header>
+  <div class="container">
+    <div class="profile-image">
+      <img src="https://via.placeholder.com/150" alt="Joohyeok Seo's Profile Picture">
+    </div>
+    <div class="section">
+      <h2>About Me</h2>
+      <p>Hello! I'm Joohyeok Seo, a data analyst and programmer with a passion for solving complex problems and delivering impactful insights.</p>
+    </div>
+    <div class="section">
+      <h2>Projects</h2>
+      <p>Here are some of my recent works:</p>
+      <ul>
+        <li><a href="https://github.com/joohyeok-seo/Student-Grade-Relationship" target="_blank">Student Grade Analysis</a></li>
+        <li><a href="https://github.com/joohyeok-seo/SFU-Dining-Preferences-Analysis" target="_blank">SFU Dining Preferences</a></li>
+      </ul>
+    </div>
+    <div class="section links">
+      <h2>Contact</h2>
+      <a href="https://github.com/joohyeok-seo" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
   </div>
+  <footer>
+    <p>© 2024 Joohyeok Seo. All rights reserved.</p>
+  </footer>
 </body>
 </html>
