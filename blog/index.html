@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SK AI Camp Journey</title>
+    <title>JooHyeok's Blog</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,26 +13,38 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            flex: 1;
+            max-width: 200px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .intro {
+            flex: 2;
         }
         h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
             color: #333;
-            text-align: center;
-            margin-bottom: 20px;
         }
         p {
             color: #555;
-            text-align: center;
+            margin: 10px 0;
         }
         ul {
             list-style: none;
             padding: 0;
-            text-align: center;
+            margin: 20px 0 0;
         }
         ul li {
             margin: 10px 0;
@@ -45,16 +57,6 @@
         ul li a:hover {
             text-decoration: underline;
         }
-        .latest-update {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .latest-update img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
-        }
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -65,30 +67,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My SK AI Camp Journey</h1>
-        <p>
-            This is my learning journey from the <strong>SK AI Camp</strong>, where I share insights, projects, and what I've learned.
-        </p>
+        <!-- Profile Picture -->
+        <img src="happy_swimming.jpg" alt="Dog in a swimming pool" class="profile-pic">
 
-        <ul>
-            <li lang="ko">
-                <a href="https://blog.naver.com/godsjh6304/223639475498">[한국어] 네이버 블로그: SK AI 캠프 후기</a>
-            </li>
-            <li lang="en">
-                <a href="https://medium.com/@your-username/day-1-introduction-to-ai">[English] Day 1: Introduction to AI</a>
-            </li>
-            <li lang="en">
-                <a href="https://medium.com/@your-username/day-2-python-basics">[English] Day 2: Python Basics</a>
-            </li>
-        </ul>
-
-        <div class="latest-update">
-            <h2>Latest Update</h2>
-            <p>Here's a relaxing moment with our adorable friend!</p>
-            <img src="happy_swimming.jpg" alt="Dog in a swimming pool">
+        <!-- Introduction -->
+        <div class="intro">
+            <h1>JooHyeok's Blog</h1>
+            <p>
+                Exploring data and learning AI at <strong>SK Group's AI Bootcamp</strong>. 
+                Join me as I share my projects, insights, and experiences along the way!
+            </p>
+            <ul>
+                <li lang="ko">
+                    <a href="https://blog.naver.com/godsjh6304/223639475498">[한국어] 네이버 블로그: SK AI 캠프 후기</a>
+                </li>
+                <li lang="en">
+                    <a href="https://medium.com/@your-username/day-1-introduction-to-ai">[English] Day 1: Introduction to AI</a>
+                </li>
+                <li lang="en">
+                    <a href="https://medium.com/@your-username/day-2-python-basics">[English] Day 2: Python Basics</a>
+                </li>
+            </ul>
         </div>
     </div>
 
+    <!-- Footer -->
     <div class="footer">
         <p>© 2024 JooHyeok Seo. All rights reserved.</p>
     </div>
