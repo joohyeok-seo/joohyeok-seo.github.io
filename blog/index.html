@@ -52,6 +52,21 @@
         .blog-section {
             margin-top: 30px;
         }
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
+                align-items: center; /* 중앙 정렬 */
+                text-align: center;
+            }
+            .intro img {
+                width: 80%; /* 이미지가 화면 너비의 80%를 차지 */
+                max-width: 300px;
+            }
+            .intro-text p {
+                font-size: 1rem; /* 폰트 크기를 줄여 가독성 향상 */
+                line-height: 1.6; /* 줄 간격을 조정 */
+            }
+        }
         .blog-section.english h2 {
             font-size: 2rem;
             color: #28a745; 
