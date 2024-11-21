@@ -8,60 +8,70 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 50px auto;
             background: white;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-        }
-        .profile {
-            flex: 1;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: 30px;
         }
-        .profile img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .content {
-            flex: 2;
-            padding: 40px;
-        }
-        .content h1 {
+        .header h1 {
             font-size: 2.5rem;
             color: #333;
             margin-bottom: 10px;
         }
-        .content p {
+        .intro {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .intro img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .intro-text {
+            flex: 1;
+        }
+        .intro-text p {
             color: #555;
             line-height: 1.6;
+        }
+        .blog-section {
+            margin-top: 30px;
+        }
+        .blog-section h2 {
+            font-size: 1.8rem;
+            color: #007bff;
             margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
         }
-        .links a {
-            display: inline-block;
-            margin: 10px 5px;
-            padding: 10px 15px;
-            color: white;
-            background-color: #007bff;
+        .blog-links {
+            list-style: none;
+            padding: 0;
+        }
+        .blog-links li {
+            margin: 10px 0;
+        }
+        .blog-links a {
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
+            color: #007bff;
+            font-weight: bold;
         }
-        .links a:hover {
-            background-color: #0056b3;
+        .blog-links a:hover {
+            text-decoration: underline;
         }
         .footer {
             text-align: center;
@@ -75,24 +85,50 @@
 </head>
 <body>
     <div class="container">
-        <!-- Profile Section -->
-        <div class="profile">
-            <img src="happy_swimming.jpg" alt="Dog in a swimming pool">
+        <!-- Header -->
+        <div class="header">
+            <h1>JooHyeok's Blog</h1>
         </div>
 
-        <!-- Content Section -->
-        <div class="content">
-            <h1>JooHyeok's Blog</h1>
-            <p>
-                Welcome to my journey in data exploration and artificial intelligence! 
-                Currently learning cutting-edge AI technologies at <strong>SK Group's AI Bootcamp</strong>.
-                Follow along as I share insights, projects, and exciting developments.
-            </p>
-            <div class="links">
-                <a href="https://blog.naver.com/godsjh6304/223639475498" target="_blank">[한국어] 네이버 블로그</a>
-                <a href="https://medium.com/@your-username/day-1-introduction-to-ai" target="_blank">Day 1: AI Basics</a>
-                <a href="https://medium.com/@your-username/day-2-python-basics" target="_blank">Day 2: Python Basics</a>
+        <!-- Introduction -->
+        <div class="intro">
+            <img src="happy_swimming.jpg" alt="Dog in a swimming pool">
+            <div class="intro-text">
+                <p>
+                    Welcome to my blog! I am currently exploring data and learning AI at 
+                    <strong>SK Group's AI Bootcamp</strong>. Here, I share my projects, insights, 
+                    and reflections on my journey as a data explorer.
+                </p>
             </div>
+        </div>
+
+        <!-- Korean Blog Section -->
+        <div class="blog-section">
+            <h2>Korean Blog</h2>
+            <ul class="blog-links">
+                <li>
+                    <a href="https://blog.naver.com/godsjh6304/223639475498" target="_blank">
+                        네이버 블로그: SK AI 캠프 후기
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- English Blog Section -->
+        <div class="blog-section">
+            <h2>English Blog</h2>
+            <ul class="blog-links">
+                <li>
+                    <a href="https://medium.com/@your-username/day-1-introduction-to-ai" target="_blank">
+                        Day 1: Introduction to AI
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@your-username/day-2-python-basics" target="_blank">
+                        Day 2: Python Basics
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
