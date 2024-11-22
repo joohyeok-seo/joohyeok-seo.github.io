@@ -30,12 +30,12 @@
         }
         
        .intro {
-            display: flex; /* 이미지와 텍스트를 나란히 배치 */
-            align-items: flex-start; /* 텍스트를 이미지의 상단에 맞춤 */
+            display: flex; /* 이미지와 텍스트를 flex 컨테이너로 설정 */
+            flex-direction: column; /* 텍스트를 이미지 아래로 배치 */
+            align-items: center; /* 내용 중앙 정렬 */
             gap: 20px; /* 이미지와 텍스트 사이 간격 */
             max-width: 900px; /* 컨테이너 너비 제한 */
             margin: 0 auto; /* 중앙 정렬 */
-            flex-wrap: wrap; /* 화면 크기가 작아지면 텍스트가 아래로 내려가도록 설정 */
         }
 
         .intro img {
