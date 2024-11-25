@@ -78,14 +78,12 @@
     }
     .links {
     display: flex;                /* 플렉스 컨테이너 */
-    justify-content: center;      /* 모든 링크를 중앙 정렬 */
-    gap: 15px;                    /* 링크 사이 간격 */
-    flex-wrap: wrap;              /* 화면 크기에 따라 줄 바꿈 허용 */
+    justify-content: center;      /* 중앙 정렬 */
+    flex-wrap: wrap;              /* 줄 바꿈 허용 */
+    gap: 15px;                    /* 링크 간 여백 */
 }
 
 .links a {
-    display: flex;                /* 플렉스 아이템으로 설정 */
-    align-items: center;          /* 아이콘과 텍스트 수직 정렬 */
     text-decoration: none;        /* 밑줄 제거 */
     font-size: 1rem;              /* 텍스트 크기 */
     text-align: center;           /* 텍스트 중앙 정렬 */
@@ -93,11 +91,11 @@
 
 @media (max-width: 768px) {       /* 모바일 환경 */
     .links a {
-        flex: 1 1 30%;            /* 첫 줄에 3개 배치 */
+        flex: 1 1 30%;            /* 첫 줄의 3개 */
     }
     .links a:nth-child(4), 
     .links a:nth-child(5) {
-        flex: 1 1 45%;            /* 두 번째 줄에 2개 배치 */
+        flex: 1 1 45%;            /* 두 번째 줄의 2개 */
     }
 }
   </style>
