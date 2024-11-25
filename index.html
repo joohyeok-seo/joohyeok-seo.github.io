@@ -93,16 +93,25 @@
         }
         .links {
             display: flex; /* 링크를 가로로 정렬 */
-            flex-wrap: wrap; /* 작은 화면에서 아이콘들이 줄 바꿈되도록 설정 */
+            flex-wrap: wrap; /* 작은 화면에서 링크가 줄 바꿈되도록 설정 */
             justify-content: center; /* 중앙 정렬 */
-            gap: 10px; /* 아이콘 사이에 여백 추가 */
+            gap: 10px; /* 링크 사이에 여백 추가 */
         }
         .links a {
-            display: flex; /* 아이콘을 가로 배치 */
+            display: flex; /* 링크를 가로 배치 */
             align-items: center; /* 아이콘과 텍스트를 수직 정렬 */
             font-size: 0.9rem; /* 텍스트 크기 조정 */
             text-decoration: none; /* 텍스트 밑줄 제거 */
-        }    
+        }
+        .link-group {
+            display: flex;
+            justify-content: center; /* 그룹을 중앙 정렬 */
+            gap: 15px; /* 그룹 내 링크 간격 설정 */
+            margin-bottom: 10px; /* 그룹 간 여백 추가 */
+        }
+        .link-group + .link-group {
+            margin-top: 10px; /* 두 번째 그룹 위쪽에 여백 추가 */
+        }
     }
   </style>
 </head>
