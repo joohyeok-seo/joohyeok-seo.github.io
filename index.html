@@ -76,34 +76,25 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
+    .links {
+        display: flex; /* 기본적으로 모든 링크를 가로로 배치 */
+        justify-content: center; /* 중앙 정렬 */
+        gap: 15px; /* 링크 간 기본 간격 */
+        flex-wrap: wrap; /* 작은 화면에서 줄 바꿈 */
+    }
+
     @media (max-width: 768px) {
-      .intro {
-          flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
-          align-items: center; /* 중앙 정렬 */
-          text-align: center;
-      }
-     .intro img {
-          width: 80%; /* 이미지가 화면 너비의 80%를 차지 */
-          max-width: 300px;
-      }
-      .intro-text p {
-          flex: 1; /* 남은 공간을 텍스트가 차지하도록 설정 */
-          font-size: 1rem; /* 폰트 크기를 줄여 가독성 향상 */
-          line-height: 1.6; /* 줄 간격을 조정 */
-      }
-     .links {
-          display: flex; /* 링크를 가로로 정렬 */
-          flex-wrap: wrap; /* 작은 화면에서 아이콘들이 줄 바꿈되도록 설정 */
-          justify-content: center; /* 중앙 정렬 */
-          gap: 10px; /* 아이콘 사이에 여백 추가 */
-      }
-      .links a {
-          display: flex; /* 아이콘을 가로 배치 */
-          align-items: center; /* 아이콘과 텍스트를 수직 정렬 */
-          font-size: 0.9rem; /* 텍스트 크기 조정 */
-          text-decoration: none; /* 텍스트 밑줄 제거 */
-      }
-  }
+        .links {
+            justify-content: center; /* 모바일 화면에서도 중앙 정렬 유지 */
+        }
+        .github, .blog {
+            display: inline-flex; /* GitHub와 Blog를 같은 줄에 유지 */
+            gap: 10px; /* 그룹 내 간격 */
+        }
+        .links .github, .links .blog {
+            margin-right: 0; /* 줄바꿈 없이 한 줄에 표시 */
+        }
+    }
   </style>
 </head>
 <body>
