@@ -76,43 +76,30 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
-    @media (max-width: 768px) {
-        .intro {
-            flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
-            align-items: center; /* 중앙 정렬 */
-            text-align: center;
-        }
-        .intro img {
-            width: 80%; /* 이미지가 화면 너비의 80%를 차지 */
-            max-width: 300px;
-        }
-        .intro-text p {
-            flex: 1; /* 남은 공간을 텍스트가 차지하도록 설정 */
-            font-size: 1rem; /* 폰트 크기를 줄여 가독성 향상 */
-            line-height: 1.6; /* 줄 간격을 조정 */
-        }
-        .links {
-            display: flex; /* 링크를 가로로 정렬 */
-            flex-wrap: wrap; /* 작은 화면에서 링크가 줄 바꿈되도록 설정 */
-            justify-content: center; /* 중앙 정렬 */
-            gap: 10px; /* 링크 사이에 여백 추가 */
-        }
-        .links a {
-            display: flex; /* 링크를 가로 배치 */
-            align-items: center; /* 아이콘과 텍스트를 수직 정렬 */
-            font-size: 0.9rem; /* 텍스트 크기 조정 */
-            text-decoration: none; /* 텍스트 밑줄 제거 */
-        }
-        .link-group {
-            display: flex;
-            justify-content: center; /* 그룹을 중앙 정렬 */
-            gap: 15px; /* 그룹 내 링크 간격 설정 */
-            margin-bottom: 10px; /* 그룹 간 여백 추가 */
-        }
-        .link-group + .link-group {
-            margin-top: 10px; /* 두 번째 그룹 위쪽에 여백 추가 */
-        }
+    .links {
+    display: flex;                /* 플렉스 컨테이너 */
+    justify-content: center;      /* 모든 링크를 중앙 정렬 */
+    gap: 15px;                    /* 링크 사이 간격 */
+    flex-wrap: wrap;              /* 화면 크기에 따라 줄 바꿈 허용 */
+}
+
+.links a {
+    display: flex;                /* 플렉스 아이템으로 설정 */
+    align-items: center;          /* 아이콘과 텍스트 수직 정렬 */
+    text-decoration: none;        /* 밑줄 제거 */
+    font-size: 1rem;              /* 텍스트 크기 */
+    text-align: center;           /* 텍스트 중앙 정렬 */
+}
+
+@media (max-width: 768px) {       /* 모바일 환경 */
+    .links a {
+        flex: 1 1 30%;            /* 첫 줄에 3개 배치 */
     }
+    .links a:nth-child(4), 
+    .links a:nth-child(5) {
+        flex: 1 1 45%;            /* 두 번째 줄에 2개 배치 */
+    }
+}
   </style>
 </head>
 <body>
