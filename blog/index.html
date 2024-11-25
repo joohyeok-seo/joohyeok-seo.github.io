@@ -61,6 +61,7 @@
         .blog-section {
             margin-top: 30px;
         }
+       
         @media (max-width: 768px) {
             .intro {
                 flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
@@ -75,6 +76,18 @@
                 flex: 1; /* 남은 공간을 텍스트가 차지하도록 설정 */
                 font-size: 1rem; /* 폰트 크기를 줄여 가독성 향상 */
                 line-height: 1.6; /* 줄 간격을 조정 */
+            }
+            .links {
+                display: flex; /* 링크를 가로로 정렬 */
+                flex-wrap: wrap; /* 작은 화면에서 아이콘들이 줄 바꿈되도록 설정 */
+                justify-content: center; /* 중앙 정렬 */
+                gap: 10px; /* 아이콘 사이에 여백 추가 */
+            }
+            .links a {
+                display: flex; /* 아이콘을 가로 배치 */
+                align-items: center; /* 아이콘과 텍스트를 수직 정렬 */
+                font-size: 0.9rem; /* 텍스트 크기 조정 */
+                text-decoration: none; /* 텍스트 밑줄 제거 */
             }
         }
         .blog-section.english h2 {
