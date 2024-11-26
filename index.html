@@ -95,6 +95,23 @@
             margin-right: 0; /* 줄바꿈 없이 한 줄에 표시 */
         }
     }
+    .interests-container {
+      display: flex; /* 가로 배치 */
+      gap: 20px; /* 열 간격 */
+      justify-content: space-between; /* 양쪽 정렬 */
+      flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+    }
+
+    .interests-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .interests-container li {
+      margin-bottom: 10px;
+    }
+    
   </style>
 </head>
 <body>
@@ -126,18 +143,21 @@
     <!-- Interests -->
     <div class="section">
       <h2>Interests</h2>
-      <ul>
-        <li>Data Science</li>
-        <li>Machine Learning</li>
-        <li>Large Language Models (LLM)</li>
-        <li>Natural Language Processing</li>
-        <li>Cloud Computing</li>
-        <li>AI-Powered Applications</li>
-        <li>Programming for Data Visualization</li>
-        <li>Multimodal Data Analysis</li>
-      </ul>
+      <div class="interests-container">
+        <ul>
+          <li>Data Science</li>
+          <li>Machine Learning</li>
+          <li>Large Language Models (LLM)</li>
+          <li>Natural Language Processing</li>
+        </ul>
+        <ul>
+          <li>Cloud Computing</li>
+          <li>AI-Powered Applications</li>
+          <li>Programming for Data Visualization</li>
+          <li>Multimodal Data Analysis</li>
+        </ul>
     </div>
-
+  </div>
     <!-- Research Projects -->
     <div class="section">
       <h2>Research Projects</h2>
