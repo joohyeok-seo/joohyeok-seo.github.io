@@ -100,7 +100,16 @@
         .links .github, .links .blog {
             margin-right: 0; /* 줄바꿈 없이 한 줄에 표시 */
         }
+        .interests-container {
+            flex-wrap: nowrap; /* 줄바꿈 방지 */
+            overflow-x: auto; /* 공간 부족 시 가로 스크롤 허용 */
+        }
+
+        .interests-container ul {
+            flex: 0 0 50%; /* 각 열이 화면 너비의 50%를 차지 */
+        }
     }
+    
     .interests-container {
       display: flex; /* 가로 배치 */
       gap: 40px; /* 열 간격 */
