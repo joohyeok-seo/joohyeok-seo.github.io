@@ -99,19 +99,22 @@
         }
         .interests-container {
             display: flex;
-            flex-wrap: wrap; /* 줄바꿈 허용 */
-            gap: 20px; /* 각 열 사이 간격 */
+            flex-wrap: nowrap; /* 줄바꿈 방지 */
+            justify-content: center; /* 중앙 정렬 */
+            overflow-x: auto; /* 공간 부족 시 가로 스크롤 허용 */
+            gap: 15px; /* 열 사이 간격 조정 */
         }
 
         .interests-container ul {
-            flex: 0 0 50%; /* 각 열이 화면 너비의 50%를 차지 */
-            list-style: disc;
-            padding-left: 20px;
+            flex: 0 0 50%; /* 각 열이 화면의 50%를 차지 */
+            list-style: none; /* 리스트 스타일 제거 */
+            padding-left: 10px; /* 모바일에서 패딩 조정 */
             margin: 0;
         }
 
         .interests-container li {
-            white-space: nowrap; /* 긴 텍스트가 줄바꿈 없이 한 줄로 유지 */
+            white-space: nowrap; /* 줄바꿈 방지 */
+            margin-bottom: 8px; /* 리스트 간격 조정 */
         }
     }
     
