@@ -89,6 +89,17 @@
         flex-wrap: wrap; /* 작은 화면에서 줄 바꿈 */
     }
 
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 10px; /* 좌우 간격을 10px로 설정 */
+      text-decoration: none;
+    }
+
+    .links img {
+      margin-right: 5px; /* 아이콘과 텍스트 사이 간격 설정 */
+    }
+
     @media (max-width: 768px) {
         .links {
             justify-content: center; /* 모바일 화면에서도 중앙 정렬 유지 */
