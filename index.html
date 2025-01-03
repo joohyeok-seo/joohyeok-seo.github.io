@@ -105,12 +105,13 @@
     }
 
     .links a {
-      text-decoration: none; /* 기본 밑줄 제거 */
+      text-decoration: none;
+      line-height: 1.5; /* 텍스트 높이를 조정 */
     }
 
     .links a:hover {
-      text-decoration: underline; /* 마우스 올렸을 때만 밑줄 추가 */
-      color: #0073e6; /* 색상 변경 */
+      text-decoration: underline;
+      text-underline-offset: 2px; /* 밑줄과 텍스트 간의 간격 조정 */
     }
     
     @media (max-width: 768px) {
