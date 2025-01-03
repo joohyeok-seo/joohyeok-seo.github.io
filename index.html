@@ -90,20 +90,19 @@
     }
 
     .links {
-      display: flex;
-      justify-content: center; /* 가운데 정렬 */
-      gap: 20px; /* 링크 간의 고정 간격 */
-    }
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* 컨테이너 간 간격 */
+}
 
-    .links a {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .links img {
-      margin-right: 5px; /* 아이콘과 텍스트 사이 간격 */
-    }
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* 모든 링크의 고정 넓이 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  text-decoration: none;
+}
 
     @media (max-width: 768px) {
         .links {
