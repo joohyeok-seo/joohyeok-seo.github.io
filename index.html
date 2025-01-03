@@ -90,20 +90,25 @@
     }
 
     .links {
-  display: flex;
-  justify-content: center;
-  gap: 15px; /* 컨테이너 간 간격 */
-}
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* 컨테이너 간 간격 */
+    }
 
-.links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px; /* 모든 링크의 고정 넓이 */
-  text-align: center; /* 텍스트 가운데 정렬 */
-  text-decoration: none;
-}
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px; /* 모든 링크의 고정 넓이 */
+      text-align: center; /* 텍스트 가운데 정렬 */
+      text-decoration: none;
+    }
 
+    .links a:hover {
+      color: #0073e6; /* 텍스트 색상 변경 */
+      text-decoration: underline; /* 밑줄 추가 */
+    }
+    
     @media (max-width: 768px) {
         .links {
             justify-content: center; /* 모바일 화면에서도 중앙 정렬 유지 */
@@ -157,23 +162,23 @@
     <div class="links">
       <a href="mailto:jsa184@sfu.ca" title="Email">
         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; height: 20px; vertical-align: middle;">
-        Email
+        &nbsp;Email
       </a>
       <a href="https://joohyeok-seo.github.io/CV.pdf" title="Download CV" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/888/888883.png" alt="CV" style="width: 20px; height: 20px; vertical-align: middle;">
-        CV
+        &nbsp;CV
       </a>
       <a href="https://www.linkedin.com/in/jacky-seo-7657b4251/" target="_blank" title="LinkedIn">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; height: 20px; vertical-align: middle;">
-        LinkedIn
+        &nbsp;LinkedIn
       </a>
       <a href="https://github.com/joohyeok-seo" target="_blank" title="GitHub">
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle;">
-        GitHub
+        &nbsp;GitHub
       </a>
       <a href="https://joohyeok-seo.github.io/blog" title="Blog" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Blog" style="width: 20px; height: 20px; vertical-align: middle;">
-        Blog
+        &nbsp;Blog
       </a>
     </div>
     <!-- Interests -->
