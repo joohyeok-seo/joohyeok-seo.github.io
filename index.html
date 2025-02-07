@@ -56,9 +56,12 @@
     .section {
       margin-top: 30px;
     }
+    
+    /* Research Projects 섹션 조정 */
     .section ul li {
-      margin-bottom: 5px;
+      margin-bottom: 5px; /* 항목 간 간격을 늘림 */
     }
+    
     .section h2 {
       font-size: 1.5rem;
       border-bottom: 3px solid #007bff;
@@ -79,25 +82,72 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
-    .filter-btns {
-      text-align: center;
-      margin-bottom: 20px;
+    .links {
+        display: flex; /* 기본적으로 모든 링크를 가로로 배치 */
+        justify-content: center; /* 중앙 정렬 */
+        gap: 15px; /* 링크 간 기본 간격 */
+        flex-wrap: wrap; /* 작은 화면에서 줄 바꿈 */
     }
-    .filter-btns button {
-      margin: 5px;
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* 컨테이너 간 간격 */
     }
-    .project-card {
-      display: none;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
-      margin-bottom: 15px;
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px; /* 모든 링크의 고정 넓이 */
+      text-align: center; /* 텍스트 가운데 정렬 */
+      text-decoration: none;
     }
+
+    .links a {
+      text-decoration: none;
+      line-height: 1.5; /* 텍스트 높이를 조정 */
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px; /* 밑줄과 텍스트 간의 간격 조정 */
+    }
+    
+    @media (max-width: 768px) {
+        .links {
+            justify-content: center; /* 모바일 화면에서도 중앙 정렬 유지 */
+        }
+        .github, .blog {
+            display: inline-flex; /* GitHub와 Blog를 같은 줄에 유지 */
+            gap: 10px; /* 그룹 내 간격 */
+        }
+        
+    }
+    
+    .interests-container {
+      display: flex; /* 가로 배치 */
+      gap: 40px; /* 열 간격 */
+      /* justify-content: space-between;양쪽 정렬 */
+      justify-content: felx-start;
+      flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+    }
+
+    .interests-container ul {
+      list-style: disc;
+      padding-left: 35px;
+      margin: 0;
+    }
+
+    .interests-container li {
+      margin-bottom: 10px;
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Profile Picture and Name -->
     <div class="text-center">
       <img src="https://joohyeok-seo.github.io/resume_picture.jpg" alt="JooHyeok Seo" class="profile-pic">
     </div>
@@ -105,49 +155,118 @@
       <h1>Joohyeok Seo</h1>
       <p>Data Analyst & Programmer | B.Sc. in Statistics, Simon Fraser University</p>
     </div>
+
+    <!-- Introduction -->
     <div class="intro">
       <p>
-        As a data analyst with a passion for uncovering insights, I transform complex datasets into actionable strategies. Leveraging my strong foundation in statistics and programming, I’ve driven projects that enhance efficiency and solve challenging problems.
+        As a data analyst with a passion for uncovering insights, I transform complex datasets into actionable strategies. Leveraging my strong foundation in statistics and programming, I’ve driven projects that enhance efficiency and solve challenging problems. Beyond data, I enjoy exploring cutting-edge tech trends and recharging on hiking trails, often with a cup of coffee in hand. ☕
       </p>
     </div>
-    <div class="filter-btns">
-      <button class="btn btn-primary" onclick="filterProjects('all')">All</button>
-      <button class="btn btn-secondary" onclick="filterProjects('ml')">Machine Learning & AI</button>
-      <button class="btn btn-secondary" onclick="filterProjects('data')">Data Analysis & Visualization</button>
-      <button class="btn btn-secondary" onclick="filterProjects('stats')">Statistical Methods</button>
-      <button class="btn btn-secondary" onclick="filterProjects('dev')">Software & Development</button>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="mailto:jsa184@sfu.ca" title="Email">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; height: 20px; vertical-align: middle;">
+        &nbsp;Email
+      </a>
+      <a href="https://joohyeok-seo.github.io/CV.pdf" title="Download CV" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888883.png" alt="CV" style="width: 20px; height: 20px; vertical-align: middle;">
+        &nbsp;CV
+      </a>
+      <a href="https://www.linkedin.com/in/jacky-seo-7657b4251/" target="_blank" title="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; height: 20px; vertical-align: middle;">
+        &nbsp;LinkedIn
+      </a>
+      <a href="https://github.com/joohyeok-seo" target="_blank" title="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 20px; height: 20px; vertical-align: middle;">
+        &nbsp;GitHub
+      </a>
+      <a href="https://joohyeok-seo.github.io/blog" title="AI_blog" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="AI_blog" style="width: 20px; height: 20px; vertical-align: middle;">
+        &nbsp;AI_blog
+      </a>
     </div>
-    <div id="projects">
-      <div class="project-card ml">
-        <h4>LLM-based Analysis</h4>
-        <p>Used OpenAI's embedding model to analyze text data.</p>
-      </div>
-      <div class="project-card data">
-        <h4>Laptop Price Prediction</h4>
-        <p>Performed regression analysis to predict laptop prices.</p>
-      </div>
-      <div class="project-card stats">
-        <h4>Bayesian Estimation</h4>
-        <p>Studied Bayesian methods and their applications.</p>
-      </div>
-      <div class="project-card dev">
-        <h4>VHDL Code Parser</h4>
-        <p>Designed a parser for debugging hardware description language.</p>
-      </div>
+    <!-- Interests -->
+    <div class="section">
+      <h2>Interests</h2>
+      <div class="interests-container">
+        <ul>
+          <li>Data Science</li>
+          <li>Machine Learning</li>
+          <li>Large Language Models (LLM)</li>
+          <li>Natural Language Processing</li>
+        </ul>
+        <ul>
+          <li>Cloud Computing</li>
+          <li>AI-Powered Applications</li>
+          <li>Programming for Data Visualization</li>
+          <li>Multimodal Data Analysis</li>
+        </ul>
     </div>
   </div>
-  <script>
-    function filterProjects(category) {
-      let projects = document.querySelectorAll('.project-card');
-      projects.forEach(project => {
-        if (category === 'all' || project.classList.contains(category)) {
-          project.style.display = 'block';
-        } else {
-          project.style.display = 'none';
-        }
-      });
-    }
-    filterProjects('all');
-  </script>
+    <!-- Research Projects -->
+    <div class="section">
+      <h2>Research Projects</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/joohyeok-seo/SKN07-3rd-3Team" target="_blank">
+            LLM Mini Project - RAG based English Learning Chatbot
+          </a> - Developed a chatbot using Retrieval-Augmented Generation (RAG) to assist users in studying for the Korean high school equivalency exam. The system utilizes FAISS for efficient document retrieval and OpenAI's GPT-3.5 for generating accurate answers and explanations. Implemented an interactive interface with Streamlit for real-time question answering and random quiz generation.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/SKN07-2nd-3Team" target="_blank">
+            Customer Churn Prediction Model
+          </a> - Applied machine learning algorithms, including XGBoost, Random Forest, RNN, and evaluated model performance using accuracy and recall metrics. Achieved 95.7% accuracy in predicting customer churn. Designed an interactive interface with Streamlit for real-time predictions.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Predicting-Lotto-Numbers-with-AI" target="_blank">
+            Predicting Lotto Numbers with AI
+          </a> - Developed machine learning models combined with statistical analysis (Chi-square, Poisson) to analyze patterns and predict lottery numbers, integrating PCA, Random Forest, and hybrid deep learning (CNN + LSTM) techniques. 
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Canadian-Gas-Price-Analysis-and-Prediction" target="_blank">
+            Canadian Gas Price Analysis and Prediction
+          </a> - Comprehensive analysis of Canadian gas prices using statistical techniques, clustering, time-series forecasting, and a recommendation system.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/credit-card-default-prediction" target="_blank">
+            Credit Card Default Prediction
+          </a> - Developed a machine learning model to predict the likelihood of credit card defaults using demographic and financial data.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Laptop-Price-Determination-Analysis" target="_blank">
+            Laptop Price Determination Analysis
+          </a> - Analyzed factors affecting laptop prices, including brand, specifications, and market trends.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/SFU-Dining-Preferences-Analysis" target="_blank">
+            SFU Dining Preferences
+          </a> - Provided insights into student dining preferences and trends based on survey data from SFU.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Applied-Multivariate-Analysis" target="_blank">
+            Applied Multivariate Analysis
+          </a> - Explored multivariate data relationships using advanced statistical methods such as PCA and factor analysis.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Applied-Linear-Models-and-Data-Analysis" target="_blank">
+            Applied Linear Models and Data Analysis
+          </a> - Conducted data analysis using linear regression models and techniques like ANOVA and residual diagnostics.
+        </li>
+        <li>
+          <a href="https://github.com/joohyeok-seo/Student-Grade-Relationship" target="_blank">
+            Student Grade Analysis
+          </a> - Investigated factors influencing student performance, including attendance, study habits, and extracurricular activities.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2024 Joohyeok Seo. All rights reserved.</p>
+  </div>
 </body>
 </html>
+
+
